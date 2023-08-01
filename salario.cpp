@@ -5,13 +5,31 @@
 
 main ()
  { setlocale(LC_ALL, "Portuguese");
-  float sal, venda, comi, total;
-  printf("Qual é o seu salário?\n");
-  scanf("%f", &sal);
-  printf("Quantas vendas você teve esse mês?\n");
-  scanf("%f", &venda);
-  comi = venda*4/100;
-  printf("Sua comissão será R$ %.2f\n", comi);
-  total = sal+comi;
-  printf("Seu salário total será: R$ %.2f\n", total);
+ float salmin, sal[5], media, total;
+ int i, mais=0;
+ 
+ printf("Digite o salário minimo: ");
+ scanf("%f", &salmin);
+
+ for (i=0; i<5; i++)
+ { 
+   printf("\nDigite o salário do funcionário: ");
+   scanf("%f", &sal[i]);
+   
+   if (sal[i] > salmin)
+     {
+     	mais = mais + 1;
+	 }
+    media= media + sal[i];
+ }
+ 
+  for (i=0; i<5; i++);
+    {
+    	if(sal[i] > sal[i]);
+	}
+total = media/5;
+
+printf("\n %i ganham mais que um salário minimo", mais);
+printf("\nMédia: %f", total); 
+  
 }
