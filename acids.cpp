@@ -10,14 +10,14 @@ main ()
    
    for (i=1; i<=5; i=i+1)
     {
-	printf("Qual é o código da cidade: ");
+	printf("Qual Ã© o cÃ³digo da cidade: ");
     scanf("%i", &cod);
     
-    printf("Qual é o número de veiculos de passeio? ");
+    printf("Qual Ã© o nÃºmero de veiculos de passeio? ");
     scanf("%i", &vei);
      soma = soma+vei;
      
-    printf("Qual é a quantidade de acidentes com vitimas? ");
+    printf("Qual Ã© a quantidade de acidentes com vitimas? ");
     scanf("%i", &acid);
      soma2 = soma2+acid;
      
@@ -41,9 +41,9 @@ main ()
 	media2 = soma2/5;
 	media3 = acid3/cid3;
 	
-   printf("\nO menor indice de acidentes é: %i da cidade: %i ", acimen, cimen);
-   printf("\nO maior indice de acidentes é: %i, da cidade: %i ", acimai, cimai);
-   printf("\nA média de veiculos das cidades é: %f", media);
-   printf("\nA média de acidentes da cidades com menos veiculos é: %f", acid3);
+   printf("\nO menor indice de acidentes Ã©: %i da cidade: %i ", acimen, cimen);
+   printf("\nO maior indice de acidentes Ã©: %i, da cidade: %i ", acimai, cimai);
+   printf("\nA mÃ©dia de veiculos das cidades Ã©: %f", media);
+   printf("\nA mÃ©dia de acidentes da cidades com menos veiculos Ã©: %f", acid3);
 	  
 }
