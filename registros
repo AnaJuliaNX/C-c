@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <locale.h>
+
+main ()
+ { setlocale(LC_ALL, "Portuguese");
+ 
+ struct servico {
+ 	int numero;
+ 	float valor;
+ 	int cadser;
+ 	int cadcli;
+ 	char nome[30];
+ };
+ servico P, J, F, R;
+ 
+ P.nome[30] = 'P','i','n','t','u','r','a';
+ P.cadser = 10;
+ 
+ J.nome[30] = 'J','a','r','d','i','n','a','g','e','m';
+ J.cadser = 11;
+ 
+ F.nome[30] = 'F','a','x','i','n','a';
+ F.cadser = 12;
+ 
+ R.nome[30] = 'R','e','f','o','r','m','a';
+ R.cadser = 13;
+ 
+ 
+ 
+}
