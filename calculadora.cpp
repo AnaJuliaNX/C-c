@@ -23,9 +23,27 @@ total = a - b;
 return total;	
 }
 
+float MultiplicaDois (float a, float b)
+{float total;
+total = a * b;
+return total;	
+}
+
+float DivideDois (float a, float b)
+{float total;
+total = a / b;
+return total;
+}
+
+float MediaTres (float a, float b, float c)
+{float total;
+total = (a + b + c)/3;
+return total
+}
+
 main ()
  { setlocale(LC_ALL, "Portuguese");
- float numero1, numero2, numero3, somaTres, subtrai;
+ float numero1, numero2, numero3, somaTres, subtrai, multiplica, divide;
  int opcao;
  
  printf("Digite os três números: ");
@@ -46,17 +64,28 @@ main ()
  	  {
  	     case 1: printf("Soma!");
  	     somaTres = somaOsTres(numero1, numero2, numero3);
- 	     printf("\nA soma dos três número é: %.0f", somaTres);
+ 	     printf("\nO resultado é: %.2f", somaTres);
  	     break;
  	     
  	     case 2: printf("Subtração!");
  	     sibtrai = subtraiDois(numero1, numero2);
- 	     printf("\nA subtração de dois número é: %.2f", subtrai);
+ 	     printf("\nO resultado é: %.2f", subtrai);
  	     break;
  	     
  	     case 3: printf("Multiplicação!");
+ 	     multiplica = multiplicaDois(numero1, numero2);
+ 	     printf("\nO resultado é: %.2f", multiplica);
+ 	     break;
  	     
- 	     
+ 	     case 4: if numero1 || numero2 || numero3 == 0 {
+ 	     	printf("O número não pode ser 0 para fazer a divisão")
+		 } else if {
+		printf("Divisão!");
+ 	     divide = divideDois
+ 	     printf("O resultado é: %.2f", divide)
+		 }
+		 break;
+		
  	  default: printf("ERROR!");   
 	}
  		
