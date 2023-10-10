@@ -1,11 +1,3 @@
-//Faça um programa que simule o funcionamento de uma
-//calculadora. O usuário deverá digitar 3 números e o programa
-//deverá ter funções específicas para calcular a soma dos
-//números, a subtração de 2 deles, a multiplicação entre
-//dois deles, a divisão de dois deles (desde que um não seja
-//zero), e a média entre os três. O programa principal
-//deverá ter um laço de repetição permitindo ao usuário
-//obter os resultados de todas as funções, se quiser.
 #include <stdio.h>
 #include <conio.h>
 #include <math.h>
@@ -17,77 +9,90 @@ total = a + b + c;
 return total;	
 }
 
-float SubtraiDois (float a, float b)
+float subtraiDois (float a, float b)
 {float total;
 total = a - b;
 return total;	
 }
 
-float MultiplicaDois (float a, float b)
+float multiplicaDois (float a, float b)
 {float total;
 total = a * b;
 return total;	
 }
 
-float DivideDois (float a, float b)
+float divideDois (float a, float b)
 {float total;
+if (a != 0 || b != 0){
 total = a / b;
-return total;
+return total;	
+}else {
+	printf("O nÃºmero nÃ£o pode ser zero");
+}
 }
 
-float MediaTres (float a, float b, float c)
+float mediaTres (float a, float b, float c)
 {float total;
 total = (a + b + c)/3;
-return total
+return total;
 }
 
 main ()
  { setlocale(LC_ALL, "Portuguese");
- float numero1, numero2, numero3, somaTres, subtrai, multiplica, divide;
+ float numero1, numero2, numero3, somaTres, subtrai, multiplica, divide, media;
  int opcao;
  
- printf("Digite os três números: ");
+ printf("Digite os trÃªs nÃºmeros: ");
  scanf("%f%f%f", &numero1, &numero2, &numero3);
  	     
- printf("Digite o número referente a uma das opções:");
- printf("\n1-Soma dos três número");
- printf("\n2-Subtração de dois deles");
- printf("\n3-Multiplicação de dois deles");
- printf("\n4-Divisão de dois deles");
- printf("\n5-Média entre os três");
+ printf("\nDigite o nÃºmero referente a uma das op??es:");
+ printf("\n1-Soma dos trÃªs nÃºmero");
+ printf("\n2-SubtraÃ§Ã£o de dois deles");
+ printf("\n3-MultiplicaÃ§Ã£o de dois deles");
+ printf("\n4-DivisÃ£o de dois deles");
+ printf("\n5-MÃ©dia entre os trÃªs");
  printf("\n6-Sair\n");
  scanf("%i", &opcao);
  
- //while(opcao != 5)
- 	//{
+ while(opcao != 6)
+ 	{
 	 switch(opcao)
  	  {
  	     case 1: printf("Soma!");
  	     somaTres = somaOsTres(numero1, numero2, numero3);
- 	     printf("\nO resultado é: %.2f", somaTres);
+ 	     printf("\nO resultado Ã©: %.2f", somaTres);
  	     break;
  	     
- 	     case 2: printf("Subtração!");
- 	     sibtrai = subtraiDois(numero1, numero2);
- 	     printf("\nO resultado é: %.2f", subtrai);
+ 	     case 2: printf("SubtraÃ§Ã£o!");
+ 	     subtrai = subtraiDois(numero1, numero2);
+ 	     printf("\nO resultado Ã©: %.2f", subtrai);
  	     break;
  	     
- 	     case 3: printf("Multiplicação!");
+ 	     case 3: printf("MultiplicaÃ§Ã£o!");
  	     multiplica = multiplicaDois(numero1, numero2);
- 	     printf("\nO resultado é: %.2f", multiplica);
+ 	     printf("\nO resultado Ã©: %.2f", multiplica);
  	     break;
  	     
- 	     case 4: if numero1 || numero2 || numero3 == 0 {
- 	     	printf("O número não pode ser 0 para fazer a divisão")
-		 } else if {
-		printf("Divisão!");
- 	     divide = divideDois
- 	     printf("O resultado é: %.2f", divide)
-		 }
+ 	     case 4: printf("DivisÃ£o!");
+ 	     divide = divideDois(numero1, numero2);
+ 	      printf("\nO resultado Ã©: %.2f", divide);
+		 break;
+		 
+		 case 5: printf("MÃ©dia!");
+		 media = mediaTres(numero1, numero2, numero3);
+		 printf("\nO resultado Ã©: %.2f", media);
 		 break;
 		
  	  default: printf("ERROR!");   
 	}
- 		
-	 //}
+
+ printf("\nDigite o nÃºmero referente a uma das opÃ§Ãµes:");
+ printf("\n1-Soma dos trÃªs nÃºmero");
+ printf("\n2-SubtraÃ§Ã£o de dois deles");
+ printf("\n3-MultiplicaÃ§Ã£o de dois deles");
+ printf("\n4-DivisÃ£o de dois deles");
+ printf("\n5-MÃ©dia entre os trÃªs");
+ printf("\n6-Sair\n");
+ scanf("%i", &opcao);	
+}
 }
